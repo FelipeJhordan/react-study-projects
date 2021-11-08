@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './components/App/App';
+import { ImageContextProvider } from './context';
 import reportWebVitals from './reportWebVitals';
+import ResetStyles from './resetStyles';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ImageContextProvider>
+      <App />
+    </ImageContextProvider>
+    <ResetStyles />
   </React.StrictMode>,
   document.getElementById('root')
 );
