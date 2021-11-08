@@ -4,7 +4,6 @@ import ImageContext from '../../../context'
 import { ImgCard } from '../styles'
 import { TipsList, Tips, DivTitleCardView } from './style'
 import IconDownload from '../../../assets/download-icon.png'
-import IconCancel from '../../../assets/cancel-icon.png'
 
 const CardView = () => {
     const { setState, state } = useContext(ImageContext)
