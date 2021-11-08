@@ -1,5 +1,8 @@
 # SMALL-PROJECTS-REACT
 Compilado de pequenos projetos utilizando a lib ( framework para alguns ) React, com intuito de desenvolvimento e aprimorar o portifólio.
+## Sumário
+:small_blue_diamond: [Compressor de Imagens](#compressor-de-imagens)
+
 
 # Compressor de imagens 
 ## Status
@@ -13,3 +16,12 @@ Compilado de pequenos projetos utilizando a lib ( framework para alguns ) React,
 
 ## Link
 https://6189665c066f3b1e62b8e7ab--gifted-lovelace-0c9a13.netlify.app/
+
+## Imagens
+###                                                           Antes de comprimir
+![Alt text](screenshots/compressor/imagem1.PNG?raw=true "Title")
+###                                                           Depois de comprimir
+![Alt text](screenshots/compressor/imagem2.PNG?raw=true "Title")
+
+
+
