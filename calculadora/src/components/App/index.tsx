@@ -1,12 +1,18 @@
-import { useState } from 'react'
-import './App.scss'
+import { CalcContextProvider } from '../../context'
+import './index.scss'
+import { Display } from './Display'
+import { Menu } from './Menu'
+
+
 
 function App() {
-
   return (
-    <div className="App">
-      Felipe
-    </div>
+    <CalcContextProvider>
+      <main className="App App--grid-1" >
+        <Display />
+        <Menu />
+      </main>
+    </CalcContextProvider>
   )
 }
 
