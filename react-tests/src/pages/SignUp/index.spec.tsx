@@ -3,11 +3,15 @@ import SignUp from "."
 
 const navigateMock = vi.fn()
 
+
+
 describe("Testa o component de SignUp", () => {
     vi.mock("react-router-dom", () => ({
         useNavigate() {
             return navigateMock;
-        }}))
+        },
+        Link: vi.fn().mockImplementation((props) => props.children)
+    }))
 
     test("Devem haver 3 inputs na minha tela", async () => {
         render(<SignUp />)
@@ -54,5 +58,13 @@ describe("Testa o component de SignUp", () => {
         fireEvent.click(button)
 
         expect(navigateMock).toHaveBeenCalledTimes(1)
+    })
+
+    test("Deve haver um link para ir para página de login", async () => {
+        render(<SignUp />)
+
+        const link = await screen.getByText("Já tem cadastro? Clique aqui!")
+
+        expect(link).toBeInTheDocument()
     })
 })

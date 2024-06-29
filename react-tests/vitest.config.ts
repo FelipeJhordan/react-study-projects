@@ -2,7 +2,9 @@
 
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { configDefaults } from 'vitest/config'
 import path from 'path';
+
 
 export default defineConfig({
     plugins: [react()],
@@ -12,6 +14,18 @@ export default defineConfig({
         setupFiles: [
             "./src/setupTests.ts"
         ],
+        include: [
+            "src/**/*.spec.tsx",
+            "src/**/*.spec.ts",
+            "src/**/*.test.ts",
+        ],
+        coverage: {
+            exclude: [
+                ...configDefaults.coverage.exclude,
+                "*/types/*",
+                "src/main.tsx"
+            ]
+        }
     },
     resolve: {
        alias: [{
